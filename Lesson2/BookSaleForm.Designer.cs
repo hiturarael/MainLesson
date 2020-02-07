@@ -30,19 +30,19 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.PriceTextBox = new System.Windows.Forms.TextBox();
+            this.TitleTextBox = new System.Windows.Forms.TextBox();
+            this.QuantityTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.QuantityTextBox = new System.Windows.Forms.TextBox();
-            this.TitleTextBox = new System.Windows.Forms.TextBox();
-            this.PriceTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ExtendedPriceTextBox = new System.Windows.Forms.TextBox();
-            this.DiscountTextBox = new System.Windows.Forms.TextBox();
-            this.DiscountedPriceTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.DiscountedPriceTextBox = new System.Windows.Forms.TextBox();
+            this.DiscountTextBox = new System.Windows.Forms.TextBox();
+            this.ExtendedPriceTextBox = new System.Windows.Forms.TextBox();
             this.CalculateButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
@@ -74,6 +74,27 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // PriceTextBox
+            // 
+            this.PriceTextBox.Location = new System.Drawing.Point(64, 81);
+            this.PriceTextBox.Name = "PriceTextBox";
+            this.PriceTextBox.Size = new System.Drawing.Size(58, 20);
+            this.PriceTextBox.TabIndex = 2;
+            // 
+            // TitleTextBox
+            // 
+            this.TitleTextBox.Location = new System.Drawing.Point(64, 50);
+            this.TitleTextBox.Name = "TitleTextBox";
+            this.TitleTextBox.Size = new System.Drawing.Size(226, 20);
+            this.TitleTextBox.TabIndex = 1;
+            // 
+            // QuantityTextBox
+            // 
+            this.QuantityTextBox.Location = new System.Drawing.Point(64, 19);
+            this.QuantityTextBox.Name = "QuantityTextBox";
+            this.QuantityTextBox.Size = new System.Drawing.Size(58, 20);
+            this.QuantityTextBox.TabIndex = 0;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -101,27 +122,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "&Quantity";
             // 
-            // QuantityTextBox
-            // 
-            this.QuantityTextBox.Location = new System.Drawing.Point(64, 19);
-            this.QuantityTextBox.Name = "QuantityTextBox";
-            this.QuantityTextBox.Size = new System.Drawing.Size(58, 20);
-            this.QuantityTextBox.TabIndex = 0;
-            // 
-            // TitleTextBox
-            // 
-            this.TitleTextBox.Location = new System.Drawing.Point(64, 50);
-            this.TitleTextBox.Name = "TitleTextBox";
-            this.TitleTextBox.Size = new System.Drawing.Size(226, 20);
-            this.TitleTextBox.TabIndex = 1;
-            // 
-            // PriceTextBox
-            // 
-            this.PriceTextBox.Location = new System.Drawing.Point(64, 81);
-            this.PriceTextBox.Name = "PriceTextBox";
-            this.PriceTextBox.Size = new System.Drawing.Size(58, 20);
-            this.PriceTextBox.TabIndex = 2;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label7);
@@ -130,44 +130,20 @@
             this.groupBox2.Controls.Add(this.DiscountedPriceTextBox);
             this.groupBox2.Controls.Add(this.DiscountTextBox);
             this.groupBox2.Controls.Add(this.ExtendedPriceTextBox);
-            this.groupBox2.Location = new System.Drawing.Point(34, 183);
+            this.groupBox2.Location = new System.Drawing.Point(34, 168);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(303, 106);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
-            // ExtendedPriceTextBox
+            // label7
             // 
-            this.ExtendedPriceTextBox.Location = new System.Drawing.Point(197, 19);
-            this.ExtendedPriceTextBox.Name = "ExtendedPriceTextBox";
-            this.ExtendedPriceTextBox.ReadOnly = true;
-            this.ExtendedPriceTextBox.Size = new System.Drawing.Size(100, 20);
-            this.ExtendedPriceTextBox.TabIndex = 0;
-            // 
-            // DiscountTextBox
-            // 
-            this.DiscountTextBox.Location = new System.Drawing.Point(197, 45);
-            this.DiscountTextBox.Name = "DiscountTextBox";
-            this.DiscountTextBox.ReadOnly = true;
-            this.DiscountTextBox.Size = new System.Drawing.Size(100, 20);
-            this.DiscountTextBox.TabIndex = 1;
-            // 
-            // DiscountedPriceTextBox
-            // 
-            this.DiscountedPriceTextBox.Location = new System.Drawing.Point(197, 71);
-            this.DiscountedPriceTextBox.Name = "DiscountedPriceTextBox";
-            this.DiscountedPriceTextBox.ReadOnly = true;
-            this.DiscountedPriceTextBox.Size = new System.Drawing.Size(100, 20);
-            this.DiscountedPriceTextBox.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(105, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Extended Price";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(103, 74);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Discounted Price";
             // 
             // label6
             // 
@@ -178,14 +154,38 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "15% Discount";
             // 
-            // label7
+            // label5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(103, 74);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Discounted Price";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(105, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Extended Price";
+            // 
+            // DiscountedPriceTextBox
+            // 
+            this.DiscountedPriceTextBox.Location = new System.Drawing.Point(197, 71);
+            this.DiscountedPriceTextBox.Name = "DiscountedPriceTextBox";
+            this.DiscountedPriceTextBox.ReadOnly = true;
+            this.DiscountedPriceTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DiscountedPriceTextBox.TabIndex = 2;
+            // 
+            // DiscountTextBox
+            // 
+            this.DiscountTextBox.Location = new System.Drawing.Point(197, 45);
+            this.DiscountTextBox.Name = "DiscountTextBox";
+            this.DiscountTextBox.ReadOnly = true;
+            this.DiscountTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DiscountTextBox.TabIndex = 1;
+            // 
+            // ExtendedPriceTextBox
+            // 
+            this.ExtendedPriceTextBox.Location = new System.Drawing.Point(197, 19);
+            this.ExtendedPriceTextBox.Name = "ExtendedPriceTextBox";
+            this.ExtendedPriceTextBox.ReadOnly = true;
+            this.ExtendedPriceTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ExtendedPriceTextBox.TabIndex = 0;
             // 
             // CalculateButton
             // 

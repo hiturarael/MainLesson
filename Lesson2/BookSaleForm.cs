@@ -22,22 +22,30 @@ namespace Lesson2
         private void CalculateButton_Click(object sender, EventArgs e)
         {
             //instantiate variables
-            int quantity;
-            decimal price, extendedPrice, discount, discountedPrice;
+            int quantity = 0;
+            decimal price = 0, extendedPrice = 0, discount = 0, discountedPrice = 0;
 
             //set values per textbox
-                //quantity from quantity textbox
-                //price from price textbox.
-            quantity = int.Parse(QuantityTextBox.Text);
-            price = decimal.Parse(PriceTextBox.Text);
+            //quantity from quantity textbox
+            //price from price textbox.
+
+            try
+            {
+                quantity = int.Parse(QuantityTextBox.Text);
+                price = decimal.Parse(PriceTextBox.Text);
+            } catch (FormatException ex)
+            {
+                MessageBox.Show("Invalid amount entered", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             //calculate values
-                //extended price = quantity * price
-                //discount = extended price * discount rate (round to 2 decimal places)
-                //discounted price = extended price - discount
+            //extended price = quantity * price
+            //discount = extended price * discount rate (round to 2 decimal places)
+            //discounted price = extended price - discount
             extendedPrice = quantity * price;
             discount = Math.Round(extendedPrice * DISCOUNT_RATE, 2);
             discountedPrice = extendedPrice - discount;
+            
 
             //display results
             //extended price as currency
