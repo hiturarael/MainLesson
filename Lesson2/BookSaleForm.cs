@@ -13,6 +13,8 @@ namespace Lesson2
     public partial class BookSaleForm : Form
     {
         const decimal DISCOUNT_RATE = 0.15M;
+        private int saleCount = 0, quantityCount = 0;
+        private decimal discountSum = 0, DiscountedPriceSum;
 
         public BookSaleForm()
         {
@@ -23,17 +25,17 @@ namespace Lesson2
         {
             //instantiate variables
             int quantity = 0;
-            decimal price = 0, extendedPrice = 0, discount = 0, discountedPrice = 0;
-
-            //set values per textbox
-            //quantity from quantity textbox
-            //price from price textbox.
+            decimal price = 0, extendedPrice = 0, discount = 0, discountedPrice = 0, discountAverage = 0;
 
             try
             {
+                //set values per textbox
+                //quantity from quantity textbox
+
                 quantity = int.Parse(QuantityTextBox.Text);
                 try
                 {
+                    //price from price textbox.
                     price = decimal.Parse(PriceTextBox.Text);
 
                     //calculate values
@@ -44,6 +46,17 @@ namespace Lesson2
                     discount = Math.Round(extendedPrice * DISCOUNT_RATE, 2);
                     discountedPrice = extendedPrice - discount;
 
+                    //Calculate the summary info
+                    //Add quantity
+                    //Increment sale
+                    //Calculate discount price
+                    //Calculate average discount
+
+                    quantityCount += quantity;
+                    discountSum += discount;
+                    DiscountedPriceSum += discountedPrice;
+                    saleCount++;
+                    discountAverage = discountSum / saleCount;
 
                     //display results
                     //extended price as currency
@@ -52,6 +65,12 @@ namespace Lesson2
                     ExtendedPriceTextBox.Text = extendedPrice.ToString("C");
                     DiscountTextBox.Text = discount.ToString("N");
                     DiscountedPriceTextBox.Text = discountedPrice.ToString("C");
+
+                    //format summary
+                    QuantitySumTextBox.Text = quantityCount.ToString();
+                    DiscountSumTextbox.Text = discountSum.ToString("C");
+                    DiscountAmountTextbox.Text = DiscountedPriceSum.ToString("C");
+                    AverageDiscountTextbox.Text = discountAverage.ToString("C");
 
                 }
                 catch (FormatException priceException)
