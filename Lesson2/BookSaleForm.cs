@@ -32,28 +32,39 @@ namespace Lesson2
             try
             {
                 quantity = int.Parse(QuantityTextBox.Text);
-                price = decimal.Parse(PriceTextBox.Text);
-            } catch (FormatException ex)
+                try
+                {
+                    price = decimal.Parse(PriceTextBox.Text);
+
+                    //calculate values
+                    //extended price = quantity * price
+                    //discount = extended price * discount rate (round to 2 decimal places)
+                    //discounted price = extended price - discount
+                    extendedPrice = quantity * price;
+                    discount = Math.Round(extendedPrice * DISCOUNT_RATE, 2);
+                    discountedPrice = extendedPrice - discount;
+
+
+                    //display results
+                    //extended price as currency
+                    //discount as number
+                    //discounted price as currency
+                    ExtendedPriceTextBox.Text = extendedPrice.ToString("C");
+                    DiscountTextBox.Text = discount.ToString("N");
+                    DiscountedPriceTextBox.Text = discountedPrice.ToString("C");
+
+                }
+                catch (FormatException priceException)
+                {
+                    MessageBox.Show("Price must be numeric.", "Data Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } catch (FormatException QuantityException)
             {
-                MessageBox.Show("Invalid amount entered", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Quantity must be numeric", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
             }
-
-            //calculate values
-            //extended price = quantity * price
-            //discount = extended price * discount rate (round to 2 decimal places)
-            //discounted price = extended price - discount
-            extendedPrice = quantity * price;
-            discount = Math.Round(extendedPrice * DISCOUNT_RATE, 2);
-            discountedPrice = extendedPrice - discount;
-            
-
-            //display results
-            //extended price as currency
-            //discount as number
-            //discounted price as currency
-            ExtendedPriceTextBox.Text = extendedPrice.ToString("C");
-            DiscountTextBox.Text = discount.ToString("N");
-            DiscountedPriceTextBox.Text = discountedPrice.ToString("C");
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
