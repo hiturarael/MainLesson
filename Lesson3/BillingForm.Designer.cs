@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.CappuccinoRadioButton = new System.Windows.Forms.RadioButton();
-            this.EspressoRadioButton = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TaxCheckBox = new System.Windows.Forms.CheckBox();
-            this.QuantityTextBox = new System.Windows.Forms.TextBox();
-            this.CalculateButton = new System.Windows.Forms.Button();
-            this.ClearButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.ItemAmountTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.TaxTextBox = new System.Windows.Forms.TextBox();
-            this.SubtotalTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ClearButton = new System.Windows.Forms.Button();
+            this.CalculateButton = new System.Windows.Forms.Button();
+            this.QuantityTextBox = new System.Windows.Forms.TextBox();
+            this.TaxCheckBox = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.IcedCappuccinoRadioButton = new System.Windows.Forms.RadioButton();
+            this.IcedLatteRadioButton = new System.Windows.Forms.RadioButton();
+            this.LatteRadioButton = new System.Windows.Forms.RadioButton();
+            this.EspressoRadioButton = new System.Windows.Forms.RadioButton();
+            this.CappuccinoRadioButton = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.TotalTextBox = new System.Windows.Forms.TextBox();
+            this.SubtotalTextBox = new System.Windows.Forms.TextBox();
+            this.TaxTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.NewOrderButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.SummaryButton = new System.Windows.Forms.Button();
@@ -74,11 +74,75 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Order Information";
             // 
+            // ItemAmountTextBox
+            // 
+            this.ItemAmountTextBox.Enabled = false;
+            this.ItemAmountTextBox.Location = new System.Drawing.Point(78, 131);
+            this.ItemAmountTextBox.Name = "ItemAmountTextBox";
+            this.ItemAmountTextBox.Size = new System.Drawing.Size(84, 20);
+            this.ItemAmountTextBox.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Item Amount";
+            // 
+            // ClearButton
+            // 
+            this.ClearButton.Enabled = false;
+            this.ClearButton.Location = new System.Drawing.Point(87, 84);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(75, 40);
+            this.ClearButton.TabIndex = 5;
+            this.ClearButton.Text = "C&lear for Next Item";
+            this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
+            // CalculateButton
+            // 
+            this.CalculateButton.Location = new System.Drawing.Point(6, 84);
+            this.CalculateButton.Name = "CalculateButton";
+            this.CalculateButton.Size = new System.Drawing.Size(75, 40);
+            this.CalculateButton.TabIndex = 4;
+            this.CalculateButton.Text = "&Calculate Selection";
+            this.CalculateButton.UseVisualStyleBackColor = true;
+            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
+            // 
+            // QuantityTextBox
+            // 
+            this.QuantityTextBox.Location = new System.Drawing.Point(58, 35);
+            this.QuantityTextBox.Name = "QuantityTextBox";
+            this.QuantityTextBox.Size = new System.Drawing.Size(100, 20);
+            this.QuantityTextBox.TabIndex = 3;
+            // 
+            // TaxCheckBox
+            // 
+            this.TaxCheckBox.AutoSize = true;
+            this.TaxCheckBox.Location = new System.Drawing.Point(6, 61);
+            this.TaxCheckBox.Name = "TaxCheckBox";
+            this.TaxCheckBox.Size = new System.Drawing.Size(72, 17);
+            this.TaxCheckBox.TabIndex = 2;
+            this.TaxCheckBox.Text = "Ta&keout?";
+            this.TaxCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "&Quantity";
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.IcedCappuccinoRadioButton);
+            this.groupBox2.Controls.Add(this.IcedLatteRadioButton);
+            this.groupBox2.Controls.Add(this.LatteRadioButton);
             this.groupBox2.Controls.Add(this.EspressoRadioButton);
             this.groupBox2.Controls.Add(this.CappuccinoRadioButton);
             this.groupBox2.Location = new System.Drawing.Point(193, 19);
@@ -87,6 +151,61 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Coffee Selections";
+            // 
+            // IcedCappuccinoRadioButton
+            // 
+            this.IcedCappuccinoRadioButton.AutoSize = true;
+            this.IcedCappuccinoRadioButton.Location = new System.Drawing.Point(6, 111);
+            this.IcedCappuccinoRadioButton.Name = "IcedCappuccinoRadioButton";
+            this.IcedCappuccinoRadioButton.Size = new System.Drawing.Size(106, 17);
+            this.IcedCappuccinoRadioButton.TabIndex = 4;
+            this.IcedCappuccinoRadioButton.TabStop = true;
+            this.IcedCappuccinoRadioButton.Text = "Iced Ca&ppuccino";
+            this.IcedCappuccinoRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // IcedLatteRadioButton
+            // 
+            this.IcedLatteRadioButton.AutoSize = true;
+            this.IcedLatteRadioButton.Location = new System.Drawing.Point(6, 88);
+            this.IcedLatteRadioButton.Name = "IcedLatteRadioButton";
+            this.IcedLatteRadioButton.Size = new System.Drawing.Size(73, 17);
+            this.IcedLatteRadioButton.TabIndex = 3;
+            this.IcedLatteRadioButton.TabStop = true;
+            this.IcedLatteRadioButton.Text = "&Iced Latte";
+            this.IcedLatteRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // LatteRadioButton
+            // 
+            this.LatteRadioButton.AutoSize = true;
+            this.LatteRadioButton.Location = new System.Drawing.Point(6, 65);
+            this.LatteRadioButton.Name = "LatteRadioButton";
+            this.LatteRadioButton.Size = new System.Drawing.Size(49, 17);
+            this.LatteRadioButton.TabIndex = 2;
+            this.LatteRadioButton.TabStop = true;
+            this.LatteRadioButton.Text = "La&tte";
+            this.LatteRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // EspressoRadioButton
+            // 
+            this.EspressoRadioButton.AutoSize = true;
+            this.EspressoRadioButton.Location = new System.Drawing.Point(6, 42);
+            this.EspressoRadioButton.Name = "EspressoRadioButton";
+            this.EspressoRadioButton.Size = new System.Drawing.Size(68, 17);
+            this.EspressoRadioButton.TabIndex = 1;
+            this.EspressoRadioButton.TabStop = true;
+            this.EspressoRadioButton.Text = "Espress&o";
+            this.EspressoRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // CappuccinoRadioButton
+            // 
+            this.CappuccinoRadioButton.AutoSize = true;
+            this.CappuccinoRadioButton.Location = new System.Drawing.Point(6, 19);
+            this.CappuccinoRadioButton.Name = "CappuccinoRadioButton";
+            this.CappuccinoRadioButton.Size = new System.Drawing.Size(82, 17);
+            this.CappuccinoRadioButton.TabIndex = 0;
+            this.CappuccinoRadioButton.TabStop = true;
+            this.CappuccinoRadioButton.Text = "C&appuccino";
+            this.CappuccinoRadioButton.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -102,139 +221,29 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
-            // CappuccinoRadioButton
+            // TotalTextBox
             // 
-            this.CappuccinoRadioButton.AutoSize = true;
-            this.CappuccinoRadioButton.Location = new System.Drawing.Point(6, 19);
-            this.CappuccinoRadioButton.Name = "CappuccinoRadioButton";
-            this.CappuccinoRadioButton.Size = new System.Drawing.Size(82, 17);
-            this.CappuccinoRadioButton.TabIndex = 0;
-            this.CappuccinoRadioButton.TabStop = true;
-            this.CappuccinoRadioButton.Text = "C&appuccino";
-            this.CappuccinoRadioButton.UseVisualStyleBackColor = true;
+            this.TotalTextBox.Enabled = false;
+            this.TotalTextBox.Location = new System.Drawing.Point(111, 74);
+            this.TotalTextBox.Name = "TotalTextBox";
+            this.TotalTextBox.Size = new System.Drawing.Size(79, 20);
+            this.TotalTextBox.TabIndex = 5;
             // 
-            // EspressoRadioButton
+            // SubtotalTextBox
             // 
-            this.EspressoRadioButton.AutoSize = true;
-            this.EspressoRadioButton.Location = new System.Drawing.Point(6, 42);
-            this.EspressoRadioButton.Name = "EspressoRadioButton";
-            this.EspressoRadioButton.Size = new System.Drawing.Size(68, 17);
-            this.EspressoRadioButton.TabIndex = 1;
-            this.EspressoRadioButton.TabStop = true;
-            this.EspressoRadioButton.Text = "Espress&o";
-            this.EspressoRadioButton.UseVisualStyleBackColor = true;
+            this.SubtotalTextBox.Enabled = false;
+            this.SubtotalTextBox.Location = new System.Drawing.Point(111, 13);
+            this.SubtotalTextBox.Name = "SubtotalTextBox";
+            this.SubtotalTextBox.Size = new System.Drawing.Size(79, 20);
+            this.SubtotalTextBox.TabIndex = 4;
             // 
-            // radioButton1
+            // TaxTextBox
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 65);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(49, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "La&tte";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 88);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(73, 17);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "&Iced Latte";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 111);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(106, 17);
-            this.radioButton3.TabIndex = 4;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Iced Ca&ppuccino";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "&Quantity";
-            // 
-            // TaxCheckBox
-            // 
-            this.TaxCheckBox.AutoSize = true;
-            this.TaxCheckBox.Location = new System.Drawing.Point(6, 61);
-            this.TaxCheckBox.Name = "TaxCheckBox";
-            this.TaxCheckBox.Size = new System.Drawing.Size(72, 17);
-            this.TaxCheckBox.TabIndex = 2;
-            this.TaxCheckBox.Text = "Ta&keout?";
-            this.TaxCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // QuantityTextBox
-            // 
-            this.QuantityTextBox.Location = new System.Drawing.Point(58, 35);
-            this.QuantityTextBox.Name = "QuantityTextBox";
-            this.QuantityTextBox.Size = new System.Drawing.Size(100, 20);
-            this.QuantityTextBox.TabIndex = 3;
-            // 
-            // CalculateButton
-            // 
-            this.CalculateButton.Location = new System.Drawing.Point(6, 84);
-            this.CalculateButton.Name = "CalculateButton";
-            this.CalculateButton.Size = new System.Drawing.Size(75, 40);
-            this.CalculateButton.TabIndex = 4;
-            this.CalculateButton.Text = "&Calculate Selection";
-            this.CalculateButton.UseVisualStyleBackColor = true;
-            // 
-            // ClearButton
-            // 
-            this.ClearButton.Location = new System.Drawing.Point(87, 84);
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(75, 40);
-            this.ClearButton.TabIndex = 5;
-            this.ClearButton.Text = "C&lear for Next Item";
-            this.ClearButton.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 134);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Item Amount";
-            // 
-            // ItemAmountTextBox
-            // 
-            this.ItemAmountTextBox.Enabled = false;
-            this.ItemAmountTextBox.Location = new System.Drawing.Point(78, 131);
-            this.ItemAmountTextBox.Name = "ItemAmountTextBox";
-            this.ItemAmountTextBox.Size = new System.Drawing.Size(84, 20);
-            this.ItemAmountTextBox.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Subtotal";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Tax (If Takeout)";
+            this.TaxTextBox.Enabled = false;
+            this.TaxTextBox.Location = new System.Drawing.Point(111, 43);
+            this.TaxTextBox.Name = "TaxTextBox";
+            this.TaxTextBox.Size = new System.Drawing.Size(79, 20);
+            this.TaxTextBox.TabIndex = 3;
             // 
             // label5
             // 
@@ -245,26 +254,23 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Total Due";
             // 
-            // TaxTextBox
+            // label4
             // 
-            this.TaxTextBox.Location = new System.Drawing.Point(111, 43);
-            this.TaxTextBox.Name = "TaxTextBox";
-            this.TaxTextBox.Size = new System.Drawing.Size(79, 20);
-            this.TaxTextBox.TabIndex = 3;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Tax (If Takeout)";
             // 
-            // SubtotalTextBox
+            // label3
             // 
-            this.SubtotalTextBox.Location = new System.Drawing.Point(111, 13);
-            this.SubtotalTextBox.Name = "SubtotalTextBox";
-            this.SubtotalTextBox.Size = new System.Drawing.Size(79, 20);
-            this.SubtotalTextBox.TabIndex = 4;
-            // 
-            // TotalTextBox
-            // 
-            this.TotalTextBox.Location = new System.Drawing.Point(111, 74);
-            this.TotalTextBox.Name = "TotalTextBox";
-            this.TotalTextBox.Size = new System.Drawing.Size(79, 20);
-            this.TotalTextBox.TabIndex = 5;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Subtotal";
             // 
             // NewOrderButton
             // 
@@ -327,9 +333,9 @@
         private System.Windows.Forms.CheckBox TaxCheckBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton IcedCappuccinoRadioButton;
+        private System.Windows.Forms.RadioButton IcedLatteRadioButton;
+        private System.Windows.Forms.RadioButton LatteRadioButton;
         private System.Windows.Forms.RadioButton EspressoRadioButton;
         private System.Windows.Forms.RadioButton CappuccinoRadioButton;
         private System.Windows.Forms.GroupBox groupBox3;
